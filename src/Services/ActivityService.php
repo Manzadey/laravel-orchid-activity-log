@@ -8,7 +8,9 @@ class ActivityService
 {
     public const NAME = 'Лог активности';
 
-    public const ROUTE = 'platform.activities.';
+    public const PLURAL = 'activities';
+
+    public const ROUTE = 'platform.' . self::PLURAL . '.';
 
     public const ROUTE_LIST = self::ROUTE . 'list';
 
