@@ -40,12 +40,6 @@ abstract class AbstractActivityListScreen extends AbstractScreen
             ModelsTableLayout::make([
                 IdTD::make()
                     ->filter(TD::FILTER_NUMERIC),
-                TD::make('log_name', __('Название лога'))
-                    ->defaultHidden()
-                    ->filter(TD::FILTER_TEXT),
-                TD::make('description', __('Описание'))
-                    ->filter(TD::FILTER_TEXT)
-                    ->defaultHidden(),
                 TD::make('event', __('Событие'))
                     ->filter(TD::FILTER_SELECT)
                     ->filterOptions(Activity::EVENTS)
@@ -58,9 +52,10 @@ abstract class AbstractActivityListScreen extends AbstractScreen
                 EntityRelationTD::make('subject', __('Сущность'))
                     ->canSee($this->isHidden('subject')),
                 CreatedAtTD::make(),
-                ActionsTD::make(static fn(Activity $activity) : DropDown => DropdownOptions::make()->list([
-                    ShowLink::route('platform.activities.show', $activity),
-                ])),
+                ActionsTD::make(static fn(Activity $activity) : DropDown => DropdownOptions::make()
+                    ->list([
+                        ShowLink::route('platform.activities.show', $activity),
+                    ])),
             ]),
         ];
     }
