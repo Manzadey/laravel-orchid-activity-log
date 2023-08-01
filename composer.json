@@ -14,8 +14,8 @@
   "require": {
     "php": "^8.1",
     "ext-json": "*",
-    "manzadey/laravel-orchid-helpers": "^0.6.0-beta",
-    "spatie/laravel-activitylog": "^4.5"
+    "manzadey/laravel-orchid-helpers": "^0.8.3-beta",
+    "spatie/laravel-activitylog": "^4.7"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
