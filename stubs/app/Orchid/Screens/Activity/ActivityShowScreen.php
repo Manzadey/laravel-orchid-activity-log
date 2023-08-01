@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\RedirectResponse;
 use JetBrains\PhpStorm\ArrayShape;
 use Manzadey\LaravelOrchidHelpers\Orchid\Helpers\Layouts\ModelLegendLayout;
-use Manzadey\LaravelOrchidHelpers\Orchid\Helpers\Screens\ModelScreen;
+use Manzadey\LaravelOrchidHelpers\Orchid\Helpers\Screens\ShowScreen;
 use Manzadey\LaravelOrchidHelpers\Orchid\Helpers\Sights\CreatedAtSight;
 use Manzadey\LaravelOrchidHelpers\Orchid\Helpers\Sights\EntitySight;
 use Manzadey\LaravelOrchidHelpers\Orchid\Helpers\Sights\IdSight;
@@ -27,7 +27,7 @@ use Orchid\Support\Facades\Layout;
 /**
  * @property Activity $model
  */
-class ActivityShowScreen extends ModelScreen
+class ActivityShowScreen extends ShowScreen
 {
     private bool $isSeeRelatedLayout = false;
 
